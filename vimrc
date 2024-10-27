@@ -29,3 +29,6 @@ if has('multi_byte') && &encoding ==# 'utf-8'
 else
   let &listchars = 'tab:> ,extends:>,precedes:<,nbsp:.'
 endif
+
+" key map
+inoremap jj <Esc>
