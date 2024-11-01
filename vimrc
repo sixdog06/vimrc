@@ -30,5 +30,13 @@ else
   let &listchars = 'tab:> ,extends:>,precedes:<,nbsp:.'
 endif
 
+"search
+set showmatch
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+"share paste
+set clipboard+=unnamed
 " key map
-inoremap jj <Esc>
+inoremap jk <Esc>
