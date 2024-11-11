@@ -38,5 +38,9 @@ set ignorecase
 set smartcase
 "share paste
 set clipboard+=unnamed
+"show number
+set number
+set relativenumber
+
 " key map
 inoremap jk <Esc>
