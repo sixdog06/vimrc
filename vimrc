@@ -38,6 +38,11 @@ set ignorecase
 set smartcase
 "share paste
 set clipboard+=unnamed
+" -- 默认 dd 删除不保存到剪贴板
+nnoremap x "_x
+nnoremap X "_X
+nnoremap d "_d
+nnoremap D "_D
 "show number
 set number
 set relativenumber
