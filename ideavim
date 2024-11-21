@@ -22,7 +22,9 @@ Plug 'machakann/vim-highlightedyank'
 " Commentary plugin
 Plug 'tpope/vim-commentary'
 
+" ================================================================================================
 " ideavim config
+" ================================================================================================
 set keep-english-in-normal
 set keep-english-in-normal-and-restore-in-insert
 
@@ -33,24 +35,24 @@ set notimeout
 " easy motion
 let mapleader = " "
 
-"普通模式下在行尾一个分号，然后进入插入模式并在当前行的下方新建一行
+" insert ; at end of current line and create a new line
 let g:WhichKeyDesc_InsertSemicolon = "<leader>j InsertSemicolon"
 nmap <leader>j A;<ESC>o
 
-"generator
-"生成getter
+" Java generator
+" getter
 let g:WhichKeyDesc_GitOrGenerate_GenerateGetter = "<leader>gg GenerateGetter"
 nmap <leader>gg :action GenerateGetter<CR>
-"生成setter
+" setter
 let g:WhichKeyDesc_GitOrGenerate_GenerateSetter = "<leader>gs GenerateSetter"
 nmap <leader>gs :action GenerateSetter<CR>
-"生成setter和getter
+" setter getter
 let g:WhichKeyDesc_GitOrGenerate_GenerateGetterAndSetter = "<leader>ga GenerateGetterAndSetter"
 nmap <leader>ga <action>(GenerateGetterAndSetter)
-"生成 equals() 和 hashcode() 的重写方法
+" equals() and hashcode()
 let g:WhichKeyDesc_GitOrGenerate_GenerateEquals = "<leader>ge GenerateEquals"
 nmap <leader>ge <action>(GenerateEquals)
-"生成toString
+" toString
 let g:WhichKeyDesc_GitOrGenerate_GenerateToString = "<leader>ge GenerateToString"
 nmap <leader>gt <action>(Actions.ActionsPlugin.GenerateToString)
 
@@ -60,11 +62,30 @@ nmap gt <action>(GotoTest)
 nmap gm <action>(MethodUp)
 " last changed in current buffer(file)
 "跳转到当前接口或抽象类的实现处
-nmap gi <action>(GotoImplementation)
+nmap ga <action>(GotoImplementation)
+nmap gs <action>(GotoSuperMethod)
+" 切换标签页
+nmap L <action>(NextTab)
+nmap H <action>(PreviousTab)
+
+"========== r:run ==========
+let g:WhichKeyDesc_RunOrRe = "<leader>r RunOrRe"
+"运行当前编辑器中的文件或类
+let g:WhichKeyDesc_RunOrRe_RunCalss = "<leader>ru RunClass"
+nmap <leader>ru :action RunClass<CR>
+"重新运行最近一次运行的程序或测试
+let g:WhichKeyDesc_RunOrRe_ReRun = "<leader>rr ReRun"
+nmap <leader>rr <action>(Rerun)
+"重新运行最近一次运行的测试Unit Tests
+let g:WhichKeyDesc_RunOrRe_ReRunTests = "<leader>rt ReRunTests"
+nmap <leader>rt <action>(RerunTests)
+"在代码中快速更改一个标识符的名称，并自动处理所有相关的引用
+let g:WhichKeyDesc_RunOrRe_Rename = "<leader>rn Rename"
+map <leader>rn <action>(RenameElement)
 
 set nocompatible           " disable vi
 
-filetype plugin indent on  " Load plugins according to detected filetype.
+filetype plugin indent on  " Load pluisNonZeroChildrenPriceValid(shadowContext.getCityId())gins according to detected filetype.
 syntax on                  " Enable syntax highlighting.
 
 set autoindent             " Indent according to previous line.
