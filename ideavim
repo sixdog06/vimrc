@@ -54,6 +54,14 @@ nmap <leader>ge <action>(GenerateEquals)
 let g:WhichKeyDesc_GitOrGenerate_GenerateToString = "<leader>ge GenerateToString"
 nmap <leader>gt <action>(Actions.ActionsPlugin.GenerateToString)
 
+"在源代码和测试代码之间快速切换
+nmap gt <action>(GotoTest)
+"将光标移动到上一个方法的声明处
+nmap gm <action>(MethodUp)
+" last changed in current buffer(file)
+"跳转到当前接口或抽象类的实现处
+nmap gi <action>(GotoImplementation)
+
 set nocompatible           " disable vi
 
 filetype plugin indent on  " Load plugins according to detected filetype.
