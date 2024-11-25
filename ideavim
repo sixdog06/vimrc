@@ -25,21 +25,18 @@ Plug 'tpope/vim-commentary'
 " ================================================================================================
 " ideavim config
 " ================================================================================================
+
+" input method switch
 set keep-english-in-normal
 set keep-english-in-normal-and-restore-in-insert
 
-" whick key
-set which-key
-set notimeout
+" ==================== plugins ====================
+set which-key           " which key
+set notimeout           " no timeout for display
 
-" easy motion
-let mapleader = " "
+let mapleader = " "     " use space as easy motion leader key
 
-" insert ; at end of current line and create a new line
-let g:WhichKeyDesc_InsertSemicolon = "<leader>j InsertSemicolon"
-nmap <leader>j A;<ESC>o
-
-" Java generator
+" ==================== g:generator ====================
 " getter
 let g:WhichKeyDesc_GitOrGenerate_GenerateGetter = "<leader>gg GenerateGetter"
 nmap <leader>gg :action GenerateGetter<CR>
@@ -56,36 +53,37 @@ nmap <leader>ge <action>(GenerateEquals)
 let g:WhichKeyDesc_GitOrGenerate_GenerateToString = "<leader>ge GenerateToString"
 nmap <leader>gt <action>(Actions.ActionsPlugin.GenerateToString)
 
-"在源代码和测试代码之间快速切换
+" ==================== g:goto ====================
+" go to unit test class
 nmap gt <action>(GotoTest)
-"将光标移动到上一个方法的声明处
-nmap gm <action>(MethodUp)
-" last changed in current buffer(file)
-"跳转到当前接口或抽象类的实现处
 nmap ga <action>(GotoImplementation)
 nmap gs <action>(GotoSuperMethod)
-" 切换标签页
 nmap L <action>(NextTab)
 nmap H <action>(PreviousTab)
 
-"========== r:run ==========
-let g:WhichKeyDesc_RunOrRe = "<leader>r RunOrRe"
-"运行当前编辑器中的文件或类
-let g:WhichKeyDesc_RunOrRe_RunCalss = "<leader>ru RunClass"
+" ==================== r:run ====================
+let g:WhichKeyDesc_RunOrRe = "<leader>r Run"
+let g:WhichKeyDesc_RunOrRe_RunClass = "<leader>ru RunClass"
 nmap <leader>ru :action RunClass<CR>
-"重新运行最近一次运行的程序或测试
 let g:WhichKeyDesc_RunOrRe_ReRun = "<leader>rr ReRun"
 nmap <leader>rr <action>(Rerun)
-"重新运行最近一次运行的测试Unit Tests
 let g:WhichKeyDesc_RunOrRe_ReRunTests = "<leader>rt ReRunTests"
 nmap <leader>rt <action>(RerunTests)
-"在代码中快速更改一个标识符的名称，并自动处理所有相关的引用
+
+" ==================== r:refactor ====================
 let g:WhichKeyDesc_RunOrRe_Rename = "<leader>rn Rename"
 map <leader>rn <action>(RenameElement)
 
+" ==================== r:refactor ====================
+let g:WhichKeyDesc_InsertSemicolon = "<leader>j InsertSemicolon"    
+nmap <leader>j A;<ESC>
+
+" ================================================================================================
+" vim config
+" ================================================================================================
 set nocompatible           " disable vi
 
-filetype plugin indent on  " Load pluisNonZeroChildrenPriceValid(shadowContext.getCityId())gins according to detected filetype.
+filetype plugin indent on  " Load plugins according to detected filetype.
 syntax on                  " Enable syntax highlighting.
 
 set autoindent             " Indent according to previous line.
@@ -115,20 +113,28 @@ else
   let &listchars = 'tab:> ,extends:>,precedes:<,nbsp:.'
 endif
 
-"search
+
+" ================================================================================================
+" my vim config
+" ================================================================================================
+
+" search
 set showmatch
 set hlsearch
 set incsearch
 set ignorecase
 set smartcase
-"share paste
+
+" share paste
 set clipboard+=unnamed
-" -- 默认 dd 删除不保存到剪贴板
+
+" d and x save to _ register
 nnoremap x "_x
 nnoremap X "_X
 nnoremap d "_d
 nnoremap D "_D
-"show number
+
+" show number
 set number
 set relativenumber
 
