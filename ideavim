@@ -37,19 +37,14 @@ set notimeout           " no timeout for display
 let mapleader = " "     " use space as easy motion leader key
 
 " ==================== g:generator ====================
-" getter
 let g:WhichKeyDesc_GitOrGenerate_GenerateGetter = "<leader>gg GenerateGetter"
 nmap <leader>gg :action GenerateGetter<CR>
-" setter
 let g:WhichKeyDesc_GitOrGenerate_GenerateSetter = "<leader>gs GenerateSetter"
 nmap <leader>gs :action GenerateSetter<CR>
-" setter getter
 let g:WhichKeyDesc_GitOrGenerate_GenerateGetterAndSetter = "<leader>ga GenerateGetterAndSetter"
 nmap <leader>ga <action>(GenerateGetterAndSetter)
-" equals() and hashcode()
 let g:WhichKeyDesc_GitOrGenerate_GenerateEquals = "<leader>ge GenerateEquals"
 nmap <leader>ge <action>(GenerateEquals)
-" toString
 let g:WhichKeyDesc_GitOrGenerate_GenerateToString = "<leader>ge GenerateToString"
 nmap <leader>gt <action>(Actions.ActionsPlugin.GenerateToString)
 
@@ -63,6 +58,7 @@ nmap H <action>(PreviousTab)
 
 " ==================== r:run ====================
 let g:WhichKeyDesc_RunOrRe = "<leader>r Run"
+
 let g:WhichKeyDesc_RunOrRe_RunClass = "<leader>ru RunClass"
 nmap <leader>ru :action RunClass<CR>
 let g:WhichKeyDesc_RunOrRe_ReRun = "<leader>rr ReRun"
@@ -74,7 +70,7 @@ nmap <leader>rt <action>(RerunTests)
 let g:WhichKeyDesc_RunOrRe_Rename = "<leader>rn Rename"
 map <leader>rn <action>(RenameElement)
 
-" ==================== r:refactor ====================
+" ==================== edit ====================
 let g:WhichKeyDesc_InsertSemicolon = "<leader>j InsertSemicolon"    
 nmap <leader>j A;<ESC>
 
