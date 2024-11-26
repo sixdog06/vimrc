@@ -71,9 +71,8 @@ let g:WhichKeyDesc_run_Rename = "<leader>rn rename"
 map <leader>rn <action>(RenameElement)
 
 " ==================== w:window ====================
-let g:WhichKeyDesc_Window = "<leader>w window"
 let g:WhichKeyDesc_Window_SplitRight = "<leader>wr SplitRight"
-nmap <leader>wr <action>(SplitRight)
+nmap <leader>wr <action>(MoveTabRight)
 let g:WhichKeyDesc_Window_CloseContent = "<leader>wc CloseContent"
 nmap <leader>wc <action>(CloseContent)
 let g:WhichKeyDesc_Window_RecentFiles = "<leader>ww RecentFiles"
