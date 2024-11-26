@@ -38,19 +38,19 @@ set NERDTree            " NERDTree
 let mapleader = " "     " use space as easy motion leader key
 
 " ==================== g:generator ====================
-let g:WhichKeyDesc_GitOrGenerate_GenerateGetter = "<leader>gg GenerateGetter"
+let g:WhichKeyDesc_Generate = "<leader>g generate"
+let g:WhichKeyDesc_Generate_GenerateGetter = "<leader>gg GenerateGetter"
 nmap <leader>gg :action GenerateGetter<CR>
-let g:WhichKeyDesc_GitOrGenerate_GenerateSetter = "<leader>gs GenerateSetter"
+let g:WhichKeyDesc_Generate_GenerateSetter = "<leader>gs GenerateSetter"
 nmap <leader>gs :action GenerateSetter<CR>
-let g:WhichKeyDesc_GitOrGenerate_GenerateGetterAndSetter = "<leader>ga GenerateGetterAndSetter"
+let g:WhichKeyDesc_Generate_GenerateGetterAndSetter = "<leader>ga GenerateGetterAndSetter"
 nmap <leader>ga <action>(GenerateGetterAndSetter)
-let g:WhichKeyDesc_GitOrGenerate_GenerateEquals = "<leader>ge GenerateEquals"
+let g:WhichKeyDesc_Generate_GenerateEquals = "<leader>ge GenerateEquals"
 nmap <leader>ge <action>(GenerateEquals)
-let g:WhichKeyDesc_GitOrGenerate_GenerateToString = "<leader>ge GenerateToString"
+let g:WhichKeyDesc_Generate_GenerateToString = "<leader>ge GenerateToString"
 nmap <leader>gt <action>(Actions.ActionsPlugin.GenerateToString)
 
 " ==================== g:goto ====================
-" go to unit test class
 nmap gt <action>(GotoTest)
 nmap ga <action>(GotoImplementation)
 nmap gs <action>(GotoSuperMethod)
@@ -58,6 +58,7 @@ nmap H <action>(PreviousTab)
 nmap L <action>(NextTab)
 
 " ==================== r:run ====================
+let g:WhichKeyDesc_run = "<leader>r run or rename"
 let g:WhichKeyDesc_run_RunClass = "<leader>ru RunClass"
 nmap <leader>ru :action RunClass<CR>
 let g:WhichKeyDesc_run_ReRun = "<leader>rr ReRun"
@@ -66,28 +67,31 @@ let g:WhichKeyDesc_run_ReRunTests = "<leader>rt ReRunTests"
 nmap <leader>rt <action>(RerunTests)
 
 " ==================== r:refactor ====================
-let g:WhichKeyDesc_RunOrRe_Rename = "<leader>rn Rename"
+let g:WhichKeyDesc_run_Rename = "<leader>rn rename"
 map <leader>rn <action>(RenameElement)
 
 " ==================== w:window ====================
-let g:WhichKeyDesc_window_split_right = "<leader>wr SplitRight"
-nmap <leader>wr <action>(MoveTabRight)
-let g:WhichKeyDesc_window_close = "<leader>wc CloseContent"
+let g:WhichKeyDesc_Window = "<leader>w window"
+let g:WhichKeyDesc_Window_SplitRight = "<leader>wr SplitRight"
+nmap <leader>wr <action>(SplitRight)
+let g:WhichKeyDesc_Window_CloseContent = "<leader>wc CloseContent"
 nmap <leader>wc <action>(CloseContent)
+let g:WhichKeyDesc_Window_RecentFiles = "<leader>ww RecentFiles"
+nmap <leader>ww <action>(RecentFiles)
 
 " ==================== edit ====================
-let g:WhichKeyDesc_InsertSemicolon = "<leader>j InsertSemicolon"
+let g:WhichKeyDesc_InsertSemicolon = "<leader>j insert semicolon"
 nmap <leader>j A;<ESC>
 
 " ================================================================================================
 " nerd tree
 " ================================================================================================
-let g:WhichKeyDesc_NERDTreeOrNo_NERDTreeFocus = "<leader>nn NERDTreeFocus"
+let g:WhichKeyDesc_NERDTree = "<leader>n NERDTree"
+let g:WhichKeyDesc_NERDTree_NERDTreeFocus = "<leader>nn NERDTreeFocus"
 nnoremap <leader>nn :NERDTreeFocus<CR>
-let g:WhichKeyDesc_NERDTreeOrNew = "<leader>n NERDTreeOrNew"
-let g:WhichKeyDesc_NERDTreeOrNew_NewDir = "<leader>nd NewDir"
+let g:WhichKeyDesc_NERDTree_NewDir = "<leader>nd NewDir"
 nmap <leader>nd <action>(NewDir)
-let g:WhichKeyDesc_NERDTreeOrNew_NewClass = "<leader>nc NewClass"
+let g:WhichKeyDesc_NERDTree_NewClass = "<leader>nc NewClass"
 nmap <leader>nc <action>(NewClass)
 
 " ================================================================================================
