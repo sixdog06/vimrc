@@ -57,13 +57,11 @@ nmap H <action>(PreviousTab)
 nmap L <action>(NextTab)
 
 " ==================== r:run ====================
-let g:WhichKeyDesc_RunOrRe = "<leader>r Run"
-
-let g:WhichKeyDesc_RunOrRe_RunClass = "<leader>ru RunClass"
+let g:WhichKeyDesc_run_RunClass = "<leader>ru RunClass"
 nmap <leader>ru :action RunClass<CR>
-let g:WhichKeyDesc_RunOrRe_ReRun = "<leader>rr ReRun"
+let g:WhichKeyDesc_run_ReRun = "<leader>rr ReRun"
 nmap <leader>rr <action>(Rerun)
-let g:WhichKeyDesc_RunOrRe_ReRunTests = "<leader>rt ReRunTests"
+let g:WhichKeyDesc_run_ReRunTests = "<leader>rt ReRunTests"
 nmap <leader>rt <action>(RerunTests)
 
 " ==================== r:refactor ====================
@@ -71,7 +69,10 @@ let g:WhichKeyDesc_RunOrRe_Rename = "<leader>rn Rename"
 map <leader>rn <action>(RenameElement)
 
 " ==================== w:window ====================
+let g:WhichKeyDesc_window_split_right = "<leader>wr SplitRight"
 nmap <leader>wr <action>(MoveTabRight)
+let g:WhichKeyDesc_window_close = "<leader>wc CloseContent"
+nmap <leader>wc <action>(CloseContent)
 
 " ==================== edit ====================
 let g:WhichKeyDesc_InsertSemicolon = "<leader>j InsertSemicolon"
