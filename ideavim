@@ -53,8 +53,8 @@ nmap <leader>gt <action>(Actions.ActionsPlugin.GenerateToString)
 nmap gt <action>(GotoTest)
 nmap ga <action>(GotoImplementation)
 nmap gs <action>(GotoSuperMethod)
-nmap L <action>(NextTab)
 nmap H <action>(PreviousTab)
+nmap L <action>(NextTab)
 
 " ==================== r:run ====================
 let g:WhichKeyDesc_RunOrRe = "<leader>r Run"
@@ -71,7 +71,7 @@ let g:WhichKeyDesc_RunOrRe_Rename = "<leader>rn Rename"
 map <leader>rn <action>(RenameElement)
 
 " ==================== edit ====================
-let g:WhichKeyDesc_InsertSemicolon = "<leader>j InsertSemicolon"    
+let g:WhichKeyDesc_InsertSemicolon = "<leader>j InsertSemicolon"
 nmap <leader>j A;<ESC>
 
 " ================================================================================================
@@ -88,7 +88,7 @@ set softtabstop =4         " Tab key indents by 4 spaces.
 set shiftwidth  =4         " >> indents by 4 spaces.
 set shiftround             " >> indents to next multiple of 'shiftwidth'.
 
-set backspace   =indent,eol,start  " Make backspace work as you would expect.
+set backspace   =indent,eol,start  " Make backspace work as you would expect.;
 set laststatus  =2         " Always show statusline.
 set display     =lastline  " Show as much as possible of the last line.
 
