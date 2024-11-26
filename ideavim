@@ -70,6 +70,9 @@ nmap <leader>rt <action>(RerunTests)
 let g:WhichKeyDesc_RunOrRe_Rename = "<leader>rn Rename"
 map <leader>rn <action>(RenameElement)
 
+" ==================== w:window ====================
+nmap <leader>wr <action>(MoveTabRight)
+
 " ==================== edit ====================
 let g:WhichKeyDesc_InsertSemicolon = "<leader>j InsertSemicolon"
 nmap <leader>j A;<ESC>
