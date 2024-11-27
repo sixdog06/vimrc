@@ -65,6 +65,8 @@ let g:WhichKeyDesc_run_ReRun = "<leader>rr ReRun"
 nmap <leader>rr <action>(Rerun)
 let g:WhichKeyDesc_run_ReRunTests = "<leader>rt ReRunTests"
 nmap <leader>rt <action>(RerunTests)
+let g:WhichKeyDesc_run_RunCoverage = "<leader>rc RunCoverage"
+nmap <leader>rc <action>(RunCoverage)
 
 " ==================== r:refactor ====================
 let g:WhichKeyDesc_run_Rename = "<leader>rn rename"
@@ -73,7 +75,7 @@ map <leader>rn <action>(RenameElement)
 " ==================== w:window ====================
 let g:WhichKeyDesc_Window_SplitRight = "<leader>wr SplitRight"
 nmap <leader>wr <action>(MoveTabRight)
-let g:WhichKeyDesc_Window_CloseContent = "<leader>wc CloseContent"
+fet g:WhichKeyDesc_Window_CloseContent = "<leader>wc CloseContent"
 nmap <leader>wc <action>(CloseContent)
 let g:WhichKeyDesc_Window_RecentFiles = "<leader>ww RecentFiles"
 nmap <leader>ww <action>(RecentFiles)
@@ -92,6 +94,11 @@ let g:WhichKeyDesc_NERDTree_NewDir = "<leader>nd NewDir"
 nmap <leader>nd <action>(NewDir)
 let g:WhichKeyDesc_NERDTree_NewClass = "<leader>nc NewClass"
 nmap <leader>nc <action>(NewClass)
+let g:WhichKeyDesc_NERDTree_NERDTreeToggle = "<leader>nt NERDTreeToggle"
+nmap <leader>nt :NERDTreeToggle<CR>
+let g:WhichKeyDesc_NERDTree_NERDTreeFind = "<leader>nf NERDTreeFind"
+nmap <leader>nf :NERDTreeFind<CR>
+
 
 " ================================================================================================
 " vim config
