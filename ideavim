@@ -79,10 +79,12 @@ fet g:WhichKeyDesc_Window_CloseContent = "<leader>wc CloseContent"
 nmap <leader>wc <action>(CloseContent)
 let g:WhichKeyDesc_Window_RecentFiles = "<leader>ww RecentFiles"
 nmap <leader>ww <action>(RecentFiles)
+let g:WhichKeyDesc_Window_HideActiveWindow = "<leader>wh HideActiveWindow"
+nmap <leader>wh <action>(HideActiveWindow)
 
 " ==================== edit ====================
 let g:WhichKeyDesc_InsertSemicolon = "<leader>j insert semicolon"
-nmap <leader>j A;<ESC>
+nmap <leader>j A;<ESC>o
 
 " ================================================================================================
 " nerd tree
@@ -143,8 +145,10 @@ set clipboard+=unnamed
 " d and x save to _ register
 nnoremap x "_x
 nnoremap X "_X
-nnoremap d "_d
-nnoremap D "_D
+" nnoremap c "_c
+" nnoremap C "_C
+" nnoremap d "_d
+" nnoremap D "_D
 
 " show number
 set number
